@@ -16,7 +16,7 @@ Scenario: Verify post API for mySocial
     And match response[*] contains {"userId": 1,"id": 1,"title": "#string","body": "#string"}
     And match each response ==  {"userId": "#number","id": "#number","title": "#string","body": "#string"}
 
-    
+
 # Scenario: Verify post by Uid API for mySocial
 #     Given path 'posts'
 #     And params userId = 1
