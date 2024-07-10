@@ -74,3 +74,9 @@ Scenario: Verify update /post/{postId} Works
   When method put
   Then status 200
   And match response == { id: 1, title: 'hi', body: 'hello', userId: 1 }
+
+Scenario: Verify delete /post/{postId} Works
+  Given def postId = 1
+  And path 'posts', postId
+  When method delete
+  Then status 200
